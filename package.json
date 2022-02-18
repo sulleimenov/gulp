@@ -1,12 +1,15 @@
 {
 	"name": "htmlstarter",
 	"version": "1.0.0",
+	"description": "Gulp Starter",
 	"main": "index.js",
-	"license": "MIT",
 	"author": "Sulleimenov",
-	"homepage": "sulleimenov.github.io/repository-name",
-	"browserslist": ["last 10 versions"],
 	"type": "module",
+	"browserslist": [
+		"last 10 versions"
+	],
+	"license": "MIT",
+	"homepage": "sulleimenov.github.io/repository-name",
 	"scripts": {
 		"start": "gulp",
 		"dev": "gulp build",
@@ -14,15 +17,15 @@
 		"predeploy": "gulp build"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.16.7",
-		"@babel/preset-env": "^7.16.8",
+		"@babel/core": "^7.17.0",
+		"@babel/preset-env": "^7.16.11",
 		"autoprefixer": "^10.4.2",
 		"babel-loader": "^8.2.3",
 		"babel-plugin-module-resolver": "^4.1.0",
 		"babel-plugin-root-import": "^6.6.0",
 		"browser-sync": "^2.27.7",
 		"browsersync-ssi": "^0.2.4",
-		"cssnano": "^5.0.15",
+		"cssnano": "^5.0.16",
 		"del": "^6.0.0",
 		"gh-pages": "^3.2.3",
 		"gulp": "^4.0.2",
@@ -32,11 +35,11 @@
 		"gulp-postcss": "^9.0.1",
 		"gulp-sass": "^5.1.0",
 		"gulp-sass-glob": "^1.1.0",
-		"postcss": "^8.4.5",
-		"sass": "^1.48.0",
-		"ssi": "^0.3.0",
-		"terser-webpack-plugin": "^5.3.0",
-		"webpack": "^5.66.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"postcss": "^8.4.6",
+		"sass": "^1.49.7",
+		"terser-webpack-plugin": "^5.3.1",
+		"webpack": "^5.68.0",
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {

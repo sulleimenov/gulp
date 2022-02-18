@@ -9,8 +9,9 @@ import ssi           from 'ssi'
 import webpackStream from 'webpack-stream'
 import webpack       from 'webpack'
 import TerserPlugin  from 'terser-webpack-plugin'
-import gulpSass      from 'gulp-sass'
+import sourcemaps    from 'gulp-sourcemaps'
 import dartSass      from 'sass'
+import gulpSass      from 'gulp-sass'
 import sassglob      from 'gulp-sass-glob'
 const  sass          = gulpSass(dartSass)
 import postCss       from 'gulp-postcss'
@@ -77,8 +78,10 @@ function scripts() {
 
 function styles() {
 	return src([`app/sass/*.*`, `!app/sass/_*.*`])
-		.pipe(eval(sassglob)())
-		.pipe(eval(sass)({ 'include css': true }))
+		.pipe(sassglob())
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.write())
 		.pipe(postCss([
 			autoprefixer({ grid: 'autoplace' }),
 			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
