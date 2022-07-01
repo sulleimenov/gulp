@@ -12,20 +12,17 @@ $grid-gutter-width: 30px
 $gutter: $grid-gutter-width
 
 // Import section
-
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
-@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
-// @import 'node_modules/bootstrap/scss/_utilities.scss'
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
 
 // Font loaded
-
 @mixin font($fontname, $fontstyle, $fontweight, $fonturl)
 	@font-face
 		font-family: $fontname
 		font-style: $fontstyle
 		font-weight: $fontweight
-		src: url($fonturl) format('ttf')
+		src: url($fonturl) format('truetype')
 
 @include font('Roboto', normal, 400, '../fonts/Roboto-Regular.ttf')
 @include font('Roboto', italic, 400, '../fonts/Roboto-Italic.ttf')
@@ -33,7 +30,6 @@ $gutter: $grid-gutter-width
 @include font('Roboto', italic, 700, '../fonts/Roboto-BoldItalic.ttf')
 
 // General css
-
 ::placeholder
 	color: #666
 
@@ -41,10 +37,11 @@ $gutter: $grid-gutter-width
 	background-color: $accent
 	color: #fff
 
-img.lazy
-	display: block
-	width: 100%
-	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+img
+	max-width: 100%
+	&.lazy
+		display: block
+		background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
 
 input, textarea
 	outline: none
